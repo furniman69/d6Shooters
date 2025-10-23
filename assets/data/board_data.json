@@ -1,0 +1,75 @@
+{
+  "board_id": "trail_pyrite_reno_v1",
+  "paths": [
+    {
+      "id": "main",
+      "type": "linear",
+      "length": 120,
+      "towns": [
+        { "name": "Pyrite",    "index": 0,   "kind": "start" },
+        { "name": "Calico",    "index": 18,  "kind": "town" },
+        { "name": "Gold Hill", "index": 45,  "kind": "town" },
+        { "name": "Lonerock",  "index": 62,  "kind": "town" },
+        { "name": "Thompson",  "index": 82,  "kind": "town" },
+        { "name": "Buckskin",  "index": 103, "kind": "town" },
+        { "name": "Reno",      "index": 119, "kind": "goal" }
+      ],
+      "events": [6, 12, 23, 31, 39, 50, 58, 68, 76, 89, 96, 109, 115],
+      "branches": ["calico_loop", "goldhill_bend", "lonerock_side", "buckskin_zigzag"]
+    },
+
+    {
+      "id": "calico_loop",
+      "type": "branch",
+      "attach_to": { "path": "main", "index": 17 },
+      "rejoin_to": { "path": "main", "index": 21 },
+      "length": 5,
+      "events": [2, 4],
+      "towns": []
+    },
+
+    {
+      "id": "goldhill_bend",
+      "type": "branch",
+      "attach_to": { "path": "main", "index": 44 },
+      "rejoin_to": { "path": "main", "index": 46 },
+      "length": 3,
+      "events": [1],
+      "towns": []
+    },
+
+    {
+      "id": "lonerock_side",
+      "type": "branch",
+      "attach_to": { "path": "main", "index": 60 },
+      "rejoin_to": { "path": "main", "index": 64 },
+      "length": 5,
+      "events": [3],
+      "towns": []
+    },
+
+    {
+      "id": "buckskin_zigzag",
+      "type": "branch",
+      "attach_to": { "path": "main", "index": 100 },
+      "rejoin_to": { "path": "main", "index": 106 },
+      "length": 7,
+      "events": [1, 3, 5],
+      "towns": []
+    }
+  ],
+  "cell_types": {
+    "normal": 0,
+    "event": 1,
+    "town": 2,
+    "start": 3,
+    "goal": 4
+  },
+  "movement_rules": {
+    "dice": "d6",
+    "enter_event_on_land": true,
+    "branch_choice": "optional_when_entering_attach_cell",
+    "win_condition": "reach_goal_index"
+  }
+}
+
