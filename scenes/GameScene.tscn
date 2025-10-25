@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cenwi01vgvh37" path="res://scripts/GameScene.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dm3s4bqakkn4o" path="res://assets/images/desert_environment.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bcd8nt47gbl7j" path="res://assets/images/icon_rations.png" id="3"]
-[ext_resource type="Texture2d" uid="uid://csovbkv6awug3" path="res://assets/images/icon_ammunition.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://csovbkv6awug3" path="res://assets/images/icon_ammunition.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cdhvc68gav6tt" path="res://assets/images/icon_gold.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cvdjam1aiy1fa" path="res://assets/images/icon_members.png" id="6"]
-[ext_resource type="Texture2D" path="res://assets/images/parchment_background.png" id="7_parchment_background"]
+[ext_resource type="Texture2D" path="res://assets/images/parchment_background.png" id="7"]
 [ext_resource type="Script" uid="uid://dxd72vmqpq0h6" path="res://scripts/GameBoard.gd" id="8"]
 
 [node name="GameScene" type="Control"]
