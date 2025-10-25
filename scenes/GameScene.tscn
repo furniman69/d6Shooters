@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca87654321"]
+[gd_scene load_steps=9 format=3 uid="uid://ca87654321"]
 
 [ext_resource type="Script" uid="uid://cenwi01vgvh37" path="res://scripts/GameScene.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dm3s4bqakkn4o" path="res://assets/images/desert_environment.png" id="2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" path="res://assets/images/parchment_background.png" id="7"]
 [ext_resource type="Script" uid="uid://dxd72vmqpq0h6" path="res://scripts/GameBoard.gd" id="8"]
 
+[ext_resource type="Texture2D" path="res://assets/images/d6_shooters_leader.png" id="9"]
 [node name="GameScene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -41,7 +42,7 @@ offset_right = 400.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_parchment_background")
+texture = ExtResource("7")
 expand_mode = 1
 
 [node name="GameBoard" type="Control" parent="ParchmentBackground"]
@@ -52,8 +53,7 @@ anchor_bottom = 1.0
 script = ExtResource("8")
 
 [node name="Player" type="TextureRect" parent="ParchmentBackground"]
-layout_mode = 0
-texture = load("res://assets/images/d6_shooters_leader.png")
+texture = ExtResource("9")
 expand_mode = 1
 stretch_mode = 5
 custom_minimum_size = Vector2(50, 50)
@@ -229,5 +229,3 @@ text = "Resolver"
 
 [connection signal="pressed" from="UI/DicePanel/RollButton" to="." method="_on_RollButton_pressed"]
 [connection signal="pressed" from="UI/DicePanel/ResolveButton" to="." method="_on_ResolveButton_pressed"]
-
-
